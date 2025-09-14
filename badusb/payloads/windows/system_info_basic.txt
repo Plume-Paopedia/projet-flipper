@@ -1,0 +1,38 @@
+REM =====================================================
+REM Titre: Collecte d'informations système basique
+REM Auteur: Projet Flipper
+REM Description: Collecte des informations système de base
+REM Target: Windows 10/11
+REM Catégorie: Reconnaissance
+REM =====================================================
+REM 
+REM ATTENTION: À utiliser uniquement sur vos propres systèmes
+REM ou avec autorisation écrite explicite
+REM
+DELAY 500
+GUI r
+DELAY 500
+STRING cmd
+ENTER
+DELAY 1000
+STRING echo "=== INFORMATIONS SYSTEME ===" > C:\temp\system_info.txt
+ENTER
+STRING systeminfo >> C:\temp\system_info.txt
+ENTER
+STRING echo "=== UTILISATEURS ===" >> C:\temp\system_info.txt
+ENTER
+STRING net user >> C:\temp\system_info.txt
+ENTER
+STRING echo "=== PROCESSUS ACTIFS ===" >> C:\temp\system_info.txt
+ENTER
+STRING tasklist >> C:\temp\system_info.txt
+ENTER
+STRING echo "=== CONNEXIONS RESEAU ===" >> C:\temp\system_info.txt
+ENTER
+STRING netstat -an >> C:\temp\system_info.txt
+ENTER
+STRING notepad C:\temp\system_info.txt
+ENTER
+DELAY 1000
+STRING exit
+ENTER
